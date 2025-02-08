@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me? 🥺</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #fbe7c6; }
+        h1 { color: #d63384; }
+        .buttons { margin-top: 20px; }
+        .yes-btn, .no-btn {
+            background: #28a745; color: white; padding: 15px; font-size: 18px;
+            border: none; border-radius: 10px; cursor: pointer; margin: 10px;
+        }
+        .no-btn { background: #dc3545; position: absolute; }
+    </style>
+    <script>
+        function moveButton() {
+            let x = Math.random() * (window.innerWidth - 150);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("no-btn").style.left = `${x}px`;
+            document.getElementById("no-btn").style.top = `${y}px`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Kya Tum Mujhe Maaf Karoge? 🥺</h1>
+    <div class="buttons">
+        <button class="yes-btn" onclick="window.location.href='happy.html'">Maan Gya 😍</button>
+        <button class="no-btn" id="no-btn" onmouseover="moveButton()">Nahi Mana 😜</button>
+    </div>
+</body>
+</html>
